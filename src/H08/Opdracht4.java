@@ -9,15 +9,15 @@ import java.applet.*;
 public class Opdracht4 extends Applet
 {
     //create variables and objects
-    TextField vak1;
-    TextField vak2;
-    Button divide1;
-    Button multiply1;
-    Button plus1;
-    Button minus1;
-    Button ce1;
-    double waarde1;
-    double waarde2;
+    private TextField vak1;
+    private TextField vak2;
+    private Button divide1;
+    private Button multiply1;
+    private Button plus1;
+    private Button minus1;
+    private Button ce1;
+    private double waarde1;
+    private double waarde2;
 
     public void init()
     {
