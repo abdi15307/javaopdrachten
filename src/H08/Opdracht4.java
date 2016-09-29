@@ -57,7 +57,7 @@ public class Opdracht4 extends Applet
         add(multiply1);
         add(divide1);
     }
-    class listen1 implements ActionListener	//minus button
+    private class listen1 implements ActionListener	//minus button
     {
         public void actionPerformed( ActionEvent e)
         {
@@ -69,7 +69,7 @@ public class Opdracht4 extends Applet
             repaint();
         }
     }
-    class listen2 implements ActionListener //plus button
+    private class listen2 implements ActionListener //plus button
     {
         public void actionPerformed( ActionEvent e)
         {
@@ -81,7 +81,7 @@ public class Opdracht4 extends Applet
             repaint();
         }
     }
-    class listen3 implements ActionListener //divide button
+    private class listen3 implements ActionListener //divide button
     {
         public void actionPerformed( ActionEvent e)
         {
@@ -93,7 +93,7 @@ public class Opdracht4 extends Applet
             repaint();
         }
     }
-    class listen4 implements ActionListener //multiply button
+    private class listen4 implements ActionListener //multiply button
     {
         public void actionPerformed( ActionEvent e)
         {
@@ -105,7 +105,7 @@ public class Opdracht4 extends Applet
             repaint();
         }
     }
-    class listen5 implements ActionListener //clear button
+    private class listen5 implements ActionListener //clear button
     {
         public void actionPerformed( ActionEvent e)
         {
