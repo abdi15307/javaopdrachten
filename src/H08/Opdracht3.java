@@ -9,12 +9,12 @@ import java.awt.event.ActionListener;
 public class Opdracht3 extends Applet
 {
     //create variables and objects
-    Label label;
-    TextField vak1;
-    Button buttonOK;
-    Button buttonreset;
-    double btw;
-    double prijs;
+    private Label label;
+    private TextField vak1;
+    private Button buttonOK;
+    private Button buttonreset;
+    private double btw;
+    private double prijs;
     String s;
     public void init()
     {
