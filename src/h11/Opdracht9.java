@@ -7,6 +7,9 @@ package h11;
 import java.applet.Applet;
 import java.awt.*;
 public class Opdracht9 extends Applet {
+    public void init(){
+        setSize(500,800);
+    }
 
     public void paint(Graphics g) {
         setBackground(Color.red);
