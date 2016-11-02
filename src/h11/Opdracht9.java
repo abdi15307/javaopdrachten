@@ -18,7 +18,7 @@ public class Opdracht9 extends Applet {
         x = 50;
         breedte = 40;
         hoogte = breedte;
-        for (int row = 0; row < 4; row++) {
+        for (int rij = 0; rij < 4; rij++) {
             x = 50;
             y +=40;
             for (int kolom = 0; kolom < 8; kolom++) {
