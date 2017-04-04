@@ -13,7 +13,7 @@ public class Praktijkopdracht extends Applet {
     public void paint(Graphics g) {
         int x = 50;
         int y = 50;
-        for (int rij = 0; rij < 4; rij++) {
+        for (int rij = 0; rij < 8; rij++) {
 
             for (int i = 0; i < 8; i++) {
                 g.setColor(Color.GREEN);

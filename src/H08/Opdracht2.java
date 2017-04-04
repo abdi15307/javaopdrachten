@@ -1,4 +1,4 @@
-package H08;
+package h08;
 
 /**
  * Created by Eigenaar on 22-9-2016.
@@ -6,10 +6,8 @@ package H08;
 
 import java.awt.*;
 import java.applet.*;
-import java.awt.event.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.applet.*;
 
 @SuppressWarnings("serial")
 public class Opdracht2 extends Applet

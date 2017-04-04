@@ -8,11 +8,11 @@ import java.applet.Applet;
 import java.awt.*;
 public class Opdracht9 extends Applet {
     public void init(){
-        setSize(500,800);
+        setSize(500,600);
     }
 
     public void paint(Graphics g) {
-        setBackground(Color.red);
+        setBackground(Color.lightGray);
         int y, x,breedte,hoogte;
         y = 50;
         x = 50;

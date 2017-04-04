@@ -1,4 +1,5 @@
-package h12;
+package demo;
+
 import java.applet.Applet;
 import java.awt.Button;
 import java.awt.Graphics;
@@ -8,10 +9,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-/**
- * Created by Eigenaar on 10-11-2016.
- */
-public class Praktijkopdracht extends Applet
+@SuppressWarnings("serial")
+public class GF extends Applet
 {
 
     Label labelNaam = new Label("Naam: ");
@@ -60,10 +59,9 @@ public class Praktijkopdracht extends Applet
     {
         public void actionPerformed(ActionEvent e)
         {
-            // de teller werd  te vroeg verhoogd
-            stringNaam[(teller)] = "Naam: "+ invoerNaam.getText();
-            stringNummer[(teller)] = "Telefoonnummer: "+ invoerNummer.getText();
             teller++;
+            stringNaam[(teller-1)] = "Naam: "+ invoerNaam.getText();
+            stringNummer[(teller-1)] = "Telefoonnummer: "+ invoerNummer.getText();
             invoerNaam.setText("");
             invoerNummer.setText("");
             invoerNaam.requestFocus();

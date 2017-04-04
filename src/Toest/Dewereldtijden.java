@@ -13,6 +13,7 @@ public class Dewereldtijden extends Applet {
     private int TijdinSydney;
     private int invoer;
     private TextField tesktvak;
+    private boolean geklikt;
 
     public void init() {
         Label label = new Label("Voer een uur in");
@@ -27,50 +28,55 @@ public class Dewereldtijden extends Applet {
     public void paint(Graphics g) {
         int x = 20;
         int y = 70;
-        if (invoer >= 0 && invoer < 24) {
-            g.drawString("London: " + TijdinLondon + ":00", x, y);
-            y += 20;
-            g.drawString("Tokyo: " + TijdinTokyo + ":00", x, y);
-            y += 20;
-            g.drawString("Newyork: " + TijdinNewyork + ":00", x, y);
-            y += 20;
-            g.drawString("Sydney: " + TijdinSydney + ":00", x, y);
+        if (geklikt) {
+            if (invoer >= 0 && invoer < 24) {
+                g.drawString("London: " + TijdinLondon + ":00", x, y);
+                y += 20;
+                g.drawString("Tokyo: " + TijdinTokyo + ":00", x, y);
+                y += 20;
+                g.drawString("Newyork: " + TijdinNewyork + ":00", x, y);
+                y += 20;
+                g.drawString("Sydney: " + TijdinSydney + ":00", x, y);
 
-        } else {
-            g.drawString("Ongeldige invoer!!", x, y);
+            } else {
+                g.drawString("Ongeldige invoer!!", x, y);
+            }
         }
     }
-    private class Listener1 implements ActionListener {
+        private class Listener1 implements ActionListener {
 
-        public void actionPerformed(ActionEvent e) {
-            String s = tesktvak.getText();
-            invoer = Integer.parseInt(s);
-            TijdinSydney = Integer.parseInt(s);
-            TijdinSydney = invoer + 9;
+            public void actionPerformed(ActionEvent e) {
+                geklikt = true;
 
-            TijdinLondon = Integer.parseInt(s);
-            TijdinLondon = invoer - 1;
+                String s = tesktvak.getText();
+                invoer = Integer.parseInt(s);
+                TijdinSydney = Integer.parseInt(s);
+                TijdinSydney = invoer + 9;
 
-            TijdinTokyo = Integer.parseInt(s);
-            TijdinTokyo = invoer + 7;
+                TijdinLondon = Integer.parseInt(s);
+                TijdinLondon = invoer - 1;
 
-            TijdinNewyork = Integer.parseInt(s);
-            TijdinNewyork = invoer - 6;
+                TijdinTokyo = Integer.parseInt(s);
+                TijdinTokyo = invoer + 7;
 
-            if (TijdinSydney > 23) {
-                TijdinSydney = TijdinSydney - 24;
+                TijdinNewyork = Integer.parseInt(s);
+                TijdinNewyork = invoer - 6;
+
+                if (TijdinSydney > 23) {
+                    TijdinSydney = TijdinSydney - 24;
+                }
+                if (TijdinLondon < 0) {
+                    TijdinLondon = TijdinLondon + 24;
+                }
+                if (TijdinTokyo > 23) {
+                    TijdinTokyo = TijdinTokyo - 24;
+                }
+                if (TijdinNewyork < 0) {
+                    TijdinNewyork = TijdinNewyork + 24;
+                }
+                repaint();
+
             }
-            if (TijdinLondon < 0) {
-                TijdinLondon = TijdinLondon + 24;
-            }
-            if (TijdinTokyo > 23) {
-                TijdinTokyo = TijdinTokyo - 24;
-            }
-            if (TijdinNewyork < 0) {
-                TijdinNewyork = TijdinNewyork + 24;
-            }
-            repaint();
-
         }
     }
-}
+
